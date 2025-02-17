@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhods & Leddy - Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?wedding,couple');">
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+            <h1 class="text-5xl font-bold">Dhods & Leddy</h1>
+            <p class="text-xl mt-2">You're Invited to Our Special Day</p>
+            <p class="text-lg mt-2">February 15, 2026</p>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="text-center my-10">
+        <h2 class="text-3xl font-semibold">Countdown to Our Wedding</h2>
+        <div id="countdown" class="mt-4 text-2xl font-bold text-blue-600"></div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-semibold">Our Love Story</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+            <img src="https://source.unsplash.com/400x300/?couple,love" class="rounded-lg shadow-md">
+            <img src="https://source.unsplash.com/400x300/?wedding,romantic" class="rounded-lg shadow-md">
+            <img src="https://source.unsplash.com/400x300/?bride,groom" class="rounded-lg shadow-md">
+        </div>
+    </section>
+
+    <!-- RSVP Form -->
+    <section class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+        <h2 class="text-center text-3xl font-semibold">RSVP</h2>
+        <form class="mt-6 text-center">
+            <input type="text" placeholder="Enter your name" class="p-2 border rounded-md w-full mb-4">
+            <input type="email" placeholder="Enter your email" class="p-2 border rounded-md w-full mb-4">
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Confirm Attendance</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+        <p>Contact Us: <a href="mailto:dcree@gmail.com" class="text-blue-400">dcree@gmail.com</a></p>
+        <p>Phone: <a href="tel:+639450995741" class="text-blue-400">+63 945 099 5741</a></p>
+        <p class="mt-2">© 2026 Dhods & Leddy Wedding. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        function updateCountdown() {
+            const weddingDate = new Date("February 15, 2026 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (timeLeft < 0) {
+                document.getElementById("countdown").innerHTML = "The Wedding Has Begun!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>

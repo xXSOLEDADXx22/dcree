@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dcree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Dcree</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Testimony</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">About</a></li>
+            </ul>
+            <button class="md:hidden text-gray-700" onclick="toggleMenu()">☰</button>
+        </div>
+        <ul id="mobileMenu" class="hidden md:hidden bg-white p-4 space-y-2">
+            <li><a href="#" class="block text-gray-700 hover:text-blue-600">Testimony</a></li>
+            <li><a href="#" class="block text-gray-700 hover:text-blue-600">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20">
+        <h2 class="text-4xl font-bold text-gray-800">Welcome to Dcree</h2>
+        <p class="text-gray-600 mt-4">Visit our official Facebook page for more info</p>
+        <a href="#" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">Click here!</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-semibold">Contact Us</p>
+            <p>Email: <a href="mailto:dcree@gmail.com" class="hover:text-blue-400">dcree@gmail.com</a></p>
+            <p>Phone: <a href="tel:+639450995741" class="hover:text-blue-400">+63 945 099 5741</a></p>
+            <p class="mt-4 text-gray-400">© 2025 Dcree. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+        }
+    </script>
+
+</body>
+</html>
