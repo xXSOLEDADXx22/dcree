@@ -10,7 +10,7 @@
 <body class="bg-gray-100 text-gray-900">
 
     <!-- Hero Section -->
-    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?wedding,couple');">
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('images/image1.jpg');">
         <div class="bg-black bg-opacity-50 p-6 rounded-lg">
             <h1 class="text-5xl font-bold">Dhods & Leddy</h1>
             <p class="text-xl mt-2">You're Invited to Our Special Day</p>
@@ -28,25 +28,34 @@
     <section class="container mx-auto p-6">
         <h2 class="text-center text-3xl font-semibold">Our Love Story</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            <img src="https://source.unsplash.com/400x300/?couple,love" class="rounded-lg shadow-md">
+            <img src="images/image1.jpg" class="rounded-lg shadow-md">
             <img src="https://source.unsplash.com/400x300/?wedding,romantic" class="rounded-lg shadow-md">
-            <img src="https://source.unsplash.com/400x300/?bride,groom" class="rounded-lg shadow-md">
+            <img src="https://vscode.dev/github/xXSOLEDADXx22/dcree/blob/development/images/image1.jpg" class="rounded-lg shadow-md">
         </div>
     </section>
 
     <!-- RSVP Form -->
-    <section class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+    <!-- <section class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
         <h2 class="text-center text-3xl font-semibold">RSVP</h2>
         <form class="mt-6 text-center">
             <input type="text" placeholder="Enter your name" class="p-2 border rounded-md w-full mb-4">
             <input type="email" placeholder="Enter your email" class="p-2 border rounded-md w-full mb-4">
             <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Confirm Attendance</button>
         </form>
+    </section> -->
+
+    <section class="container mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+        <h2 class="text-center text-3xl font-semibold">RSVP</h2>
+        <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_blank" class="mt-6 text-center">
+            <input type="text" name="entry.YOUR_NAME_ID" placeholder="Enter your full name" class="p-2 border rounded-md w-full mb-4" required>
+            <input type="email" name="entry.YOUR_EMAIL_ID" placeholder="Enter your email" class="p-2 border rounded-md w-full mb-4" required>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Confirm Attendance</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white text-center py-6 mt-10">
-        <p>Contact Us: <a href="mailto:dcree@gmail.com" class="text-blue-400">dcree@gmail.com</a></p>
+        <p>Contact Us: <a href="mailto:dhodssoledad@gmail.com" class="text-blue-400">dhodssoledad@gmail.com</a></p>
         <p>Phone: <a href="tel:+639450995741" class="text-blue-400">+63 945 099 5741</a></p>
         <p class="mt-2">© 2026 Dhods & Leddy Wedding. All Rights Reserved.</p>
     </footer>
